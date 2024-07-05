@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ----------------------------------------- header and navbar ------------------------------------------  */
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(images/header-image.png);
+  background-size: cover;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+  border-bottom: 6px solid #333;
+}
+
+/* -------------- navbar -----------------  */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.logo {
+  width: 150px;
+  cursor: pointer;
+}
+.navbar button {
+  border: 0;
+  outline: none;
+  background-color: #db0001;
+  color: #fff;
+  padding: 9px 18px;
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#english-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 7px 10px;
+  transition: background 0.3s;
+}
+#english-btn:hover {
+  display: inline-flex;
+  align-items: center;
+  background: #db0001;
+  padding: 7px 10px;
+}
+
+#english-btn img {
+  width: 10px;
+  margin-left: 10px;
+}
+
+/* ----------------- header-content -------------------  */
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 100px;
+  /* border: 2px solid red; */
+}
+.header-content h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 50px;
+  max-width: 950px;
+  /* border: 2px solid red; */
+}
+.header-content h3 {
+  font-weight: 400;
+  margin: 20px 0;
+  font-size: 25px;
+}
+.header-content p {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.email-signup {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 20px auto 0;
+  max-width: 600px;
+}
+.email-signup input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+.email-signup button {
+  background-color: #db0001;
+  border: 0;
+  outline: none;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* <!-- --------------------------------------------- Features ----------------------------------------------  --> */
+
+.feature {
+  padding: 50px 12%;
+  font-size: 22px;
+  /* border: 2px solid blue; */
+}
+
+.row {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 6px solid #333;
+  /* margin-bottom: 20px; */
+}
+
+.text-col {
+  flex-basis: 50%;
+}
+
+.text-col h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.img-col {
+  flex-basis: 50%;
+}
+.img-col img {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+/* ---------------------------------------------- FAQS -----------------------------------------------  */
+
+.faqs {
+  /* border: 2px solid red; */
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+}
+.faqs h2 {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.accordian {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+  /* border: 2px solid blue; */
+}
+.accordian li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+  /* border: 2px solid green; */
+}
+
+input[type="radio"] {
+  display: none;
+}
+.accordian li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #303030;
+  margin-bottom: 3px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+label::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+  font-size: 34px;
+  transition: transform 0.3s;
+}
+
+.content {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+}
+
+.accordian input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.accordian input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+
+.faqs small {
+  font-size: 17px;
+}
+.faqs .email-signup {
+  max-width: 600px;
+  margin: 20px auto 60px;
+}
+
+/* ------------------------------------ footer -------------------------------  */
+
+.footer {
+  border-top: 6px solid #333;
+  padding: 50px 12% 90px;
+  color: #777;
+}
+.footer h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.f-row {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.col {
+  flex-basis: 25%;
+  flex-grow: 1;
+  /* margin-bottom: 20px; */
+}
+.col a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.col a:hover {
+  display: block;
+  text-decoration: underline;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#ft-btn {
+  color: #fff;
+  background: transparent;
+  padding: 8px 18px;
+  border: 1px solid #777;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+#ft-btn img {
+  width: 12px;
+  margin-left: 8px;
+}
+
+.copyright-text {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* ------------------------------------------------- Media query -------------------------------------  */
+@media only screen and (max-width: 650px) {
+  .logo {
+    width: 100px;
+  }
+  .navbar button {
+    padding: 5px 10px;
+  }
+  #english-btn {
+    padding: 4px 8px;
+  }
+
+  .header-content {
+    position: unset;
+    transform: none;
+  }
+
+  .header-content h1 {
+    font-size: 30px;
+    max-width: 550px;
+    /* border: 2px solid red; */
+    line-height: 40px;
+  }
+  .email-signup {
+    max-width: 400px;
+  }
+
+  .email-signup button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .text-col,
+  .img-col {
+    flex-basis: 100%;
+  }
+
+  .text-col h2 {
+    font-size: 31px;
+  }
+  .text-col p {
+    font-size: 18px;
+  }
+
+  .row:nth-child(2),
+  .row:nth-child(4) {
+    flex-direction: column-reverse;
+  }
+
+  .row {
+    padding: 30px 0;
+    /* border: 2px solid red; */
+  }
+
+  .faqs h2 {
+    font-size: 25px;
+  }
+
+  .accordian {
+    margin: 30px auto;
+    /* border: 2px solid blue; */
+  }
+  .content p {
+    font-size: 14px;
+  }
+  .accordian li label {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  label::after {
+    font-size: 22px;
+  }
+  .col a {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .col a:hover {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .footer h2 {
+    font-size: 17px;
+  }
+
+  #ft-btn {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+  #ft-btn img {
+    width: 10px;
+  }
+  .copyright-text {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+}
